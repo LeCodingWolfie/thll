@@ -1,9 +1,7 @@
-logo/*.pdf
-
 ## Core latex/pdflatex auxiliary files:
-*/*.aux
-*/*.log
+*.aux
 *.lof
+*.log
 *.lot
 *.fls
 *.out

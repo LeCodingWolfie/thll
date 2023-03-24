@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\makeatletter
+\def\logosmaller#1{%
+  \hbox{\sbox\z@ T%
+    \vbox to\ht\z@{\hbox{\check@mathfonts
+      \fontsize\sf@size\z@
+      \math@fontsfalse\selectfont #1}\vss}}}
+
+\newcommand\thll{%
+  T\kern-.2em%
+  \lower.75ex\hbox{\logosmaller{H}}\kern-.075em%
+  L\kern-.075em%
+  L\@}
+\makeatother
+
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\setmainfont[Path=../fonts/]{Orgreave.ttf}
+
+\begin{document}
+
+\Huge \thll\
+
+\end{document}
