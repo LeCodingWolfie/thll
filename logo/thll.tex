@@ -1,12 +1,15 @@
 \documentclass{article}
 
+% Adapted from [1]
 \makeatletter
+% Changes the font size to script size and aligns on top
 \def\logosmaller#1{%
   \hbox{\sbox\z@ T%
     \vbox to\ht\z@{\hbox{\check@mathfonts
       \fontsize\sf@size\z@
       \math@fontsfalse\selectfont #1}\vss}}}
 
+% Builds the LaTeX-like ThLL logo
 \newcommand\thll{%
   T\kern-.2em%
   \lower.75ex\hbox{\logosmaller{H}}\kern-.075em%
@@ -14,12 +17,12 @@
   L\@}
 \makeatother
 
-\usepackage{anyfontsize}
+% Sets Orgreave as ThLL logo font
 \usepackage{fontspec}
 \setmainfont[Path=../fonts/]{Orgreave.ttf}
 
 \begin{document}
-
-\Huge \thll\
-
+\Huge \thll
 \end{document}
+
+% [1]: https://tex.stackexchange.com/a/576225
